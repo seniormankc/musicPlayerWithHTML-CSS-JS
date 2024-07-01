@@ -1,0 +1,101 @@
+*{
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+}
+body{
+       min-height: 100vh;
+       width: 100%;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       background-image: url('images/background.avif');
+       background-repeat: no-repeat;
+       background-size: cover;
+       background-position: center center;
+}
+h2{
+       color: rgb(154, 193, 228) ;
+       text-transform: uppercase;
+}
+.card{
+       background-color: rgba(201, 182, 182, 0.178);
+       width: min(100%,350px);
+       height: 450px;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       border-radius: 10px;
+       box-shadow: #ece7e7 1px 2px 3px ;
+       justify-content: space-evenly;
+}
+.card .image{
+       animation-name: rotate;
+       animation-duration: 2s;
+       animation-delay: 0ms;
+       animation-timing-function: ease-in-out;
+       animation-iteration-count: infinite;
+       transition: all;
+}
+@keyframes rotate {
+       from{
+            transform: rotate(1deg);
+       }
+       to{
+              transform: rotate(360deg);
+       }
+}
+.card  img{
+       width: 200px;
+       height:200px;
+       border-radius: 50%;
+       box-shadow: 1px 2px 3px #4d4d4d;
+}
+.card .controller{
+       width: 100%;
+}
+.card .controller{
+       display: flex;
+       justify-content:space-evenly;
+}
+.card .controller .pause{
+       display: none;
+}
+.card .controller i{
+       font-size: 2em;
+       color: rgb(154, 193, 228);
+       text-shadow: #4d4d4d 1px 2px 3px;
+       
+}
+.card .controller i:hover{
+        transition-property: transform color;
+        transition-duration: 2s;
+        cursor: pointer;
+        transform: scaleX(1.2);
+}
+.card .musicinfo{
+       width: 100%;
+}
+.card .musicinfo .progressbar{
+       background-color: #fff;
+       border-radius: 5px;
+       cursor: pointer;
+       height: 4px;
+       width: 80%;
+       margin: 0 auto;
+}
+.progress{
+       background-color: red;
+       border-radius: 5px;
+       height: 5px;
+       width:  0%;
+       transition: width 0.1 linear;
+}
+.card .musicinfo h4{
+       width: 50%;
+     margin: 0.5em auto;
+     color: white;
+     text-transform: capitalize;
+}
